@@ -16,7 +16,7 @@ external_stylesheets = [
     }
 ]
 # importing data
-df=pd.read_csv('C:/Users/shahi/OneDrive/Desktop/pyhton/campus x/Dashboard_covid19/IndividualDetails.csv')
+df=pd.read_csv('IndividualDetails.csv')
 # cards
 total_case=df.shape[0]
 recovered=df[df['current_status']=='Recovered'].shape[0]
@@ -33,7 +33,7 @@ option=[
 ndf=df['detected_state'].value_counts().reset_index()
 
 # Cleaning Data and grouping Age
-nndf=pd.read_csv('C:/Users/shahi/OneDrive/Desktop/pyhton/campus x/Dashboard_covid19/IndividualDetails.csv')
+nndf=pd.read_csv('IndividualDetails.csv')
 nndf.dropna(subset=['age'],inplace=True)
 nndf['age']=pd.to_numeric(nndf['age'],errors='coerce')
 # creating bins
