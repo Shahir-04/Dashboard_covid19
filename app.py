@@ -54,6 +54,7 @@ fig1=px.line(q,x='Date',y='Covid Cases',title='Day by Day Analysis',hover_name='
 
 # Creating Dashboard
 app=dash.Dash(__name__,external_stylesheets=external_stylesheets)
+server=app.server
 app.layout=html.Div([
     html.Br(),
     html.H1('Covid-19 Dashboard',style={'color':'white','text-align':'center'}),
